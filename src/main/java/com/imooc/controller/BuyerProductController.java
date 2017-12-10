@@ -8,12 +8,15 @@ import com.imooc.dataobject.ProductInfo;
 import com.imooc.service.CategoryService;
 import com.imooc.service.ProductService;
 import com.imooc.utils.ResultVOUtil;
+import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -72,4 +75,5 @@ public class BuyerProductController {
         System.out.println(productVOList);
         return ResultVOUtil.success(productVOList);
     }
+
 }
